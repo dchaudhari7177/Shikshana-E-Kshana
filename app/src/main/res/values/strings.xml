@@ -17,4 +17,9 @@
     <string name="kannada">Kannada</string>
     <string name="math">Math</string>
     <string name="science">Science</string>
+    <string name="enter_class">Enter Class</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="save">Save</string>
 </resources>
