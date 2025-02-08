@@ -8,13 +8,12 @@
     android:background="@drawable/radient_bg"
     tools:context=".HomeActivity">
 
-    <!-- User Profile Icon on the top right -->
     <ImageView
         android:id="@+id/user_profile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/lo1"
-    android:contentDescription="@string/user_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/profile"
+    android:contentDescription="user_profile"
     android:layout_marginTop="16dp"
     android:layout_marginEnd="16dp"
 
@@ -24,10 +23,10 @@
     <!-- App Logo in the center top -->
     <ImageView
         android:id="@+id/app_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
         android:src="@drawable/applogo"
-    android:contentDescription="@string/app_logo"
+    android:contentDescription="App logo"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -37,92 +36,86 @@
     <Button
         android:id="@+id/english_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="@string/english"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toBottomOf="@id/app_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="20dp"/>
 
     <!-- Button 2 - Kannada -->
     <Button
         android:id="@+id/kannada_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/kannada"
         app:layout_constraintTop_toBottomOf="@id/english_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="16dp"/>
 
     <!-- Button 3 - Science -->
     <Button
         android:id="@+id/science_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="@string/science"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toBottomOf="@id/kannada_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="16dp"/>
 
     <!-- Button 4 - Math -->
     <Button
         android:id="@+id/math_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/math"
         app:layout_constraintTop_toBottomOf="@id/science_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="16dp"/>
 
     <!-- Button 5 - History -->
     <Button
         android:id="@+id/history_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="@string/history"
         app:layout_constraintTop_toBottomOf="@id/math_button"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="16dp"/>
 
     <!-- Button 6 - Geography -->
     <Button
         android:id="@+id/geography_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="@string/geography"
         app:layout_constraintTop_toBottomOf="@id/history_button"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="16dp"/>
 
     <ImageButton
     android:id="@+id/bottom_left_image_button"
-    android:layout_width="88dp"
-        android:layout_height="88dp"
+    android:layout_width="132dp"
+        android:layout_height="132dp"
     android:src="@drawable/ho1"
-    android:contentDescription="@string/bottom_left_image"
+    android:contentDescription="Bottom Left Image"
     android:layout_marginStart="16dp"
     android:layout_marginBottom="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -130,5 +123,32 @@
     android:scaleType="fitCenter"
         android:background="?attr/selectableItemBackgroundBorderless"/>
 
+    <TextView
+        android:id="@+id/ask_questions_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ask Questions Here"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/ask_id"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/ask_id"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/button_ab"
+        android:hint="Ask AI Ved"
+        android:gravity="center"
+        android:textSize="21sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_left_image_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
