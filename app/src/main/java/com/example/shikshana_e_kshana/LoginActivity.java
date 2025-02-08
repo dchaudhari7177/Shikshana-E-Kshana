@@ -19,7 +19,8 @@ public class LoginActivity extends AppCompatActivity {
         TextView signupLink = findViewById(R.id.signupLink);
 
         loginButton.setOnClickListener(v -> {
-            // Implement login logic here
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
         });
 
         signupLink.setOnClickListener(v -> {

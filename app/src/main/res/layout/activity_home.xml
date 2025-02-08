@@ -5,6 +5,122 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/radient_bg"
     tools:context=".HomeActivity">
+
+    <!-- User Profile Icon on the top right -->
+    <ImageView
+        android:id="@+id/user_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lo1"
+    android:contentDescription="user_profile"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- App Logo in the center top -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/applogo"
+    android:contentDescription="App logo"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="40dp"/>
+
+    <!-- Button 1 - English -->
+    <Button
+        android:id="@+id/english_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/english"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/app_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Button 2 - Kannada -->
+    <Button
+        android:id="@+id/kannada_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/kannada"
+        app:layout_constraintTop_toBottomOf="@id/english_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button 3 - Science -->
+    <Button
+        android:id="@+id/science_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/science"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/kannada_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button 4 - Math -->
+    <Button
+        android:id="@+id/math_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/math"
+        app:layout_constraintTop_toBottomOf="@id/science_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button 5 - History -->
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        app:layout_constraintTop_toBottomOf="@id/math_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button 6 - Geography -->
+    <Button
+        android:id="@+id/geography_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/geography"
+        app:layout_constraintTop_toBottomOf="@id/history_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ImageButton
+    android:id="@+id/bottom_left_image_button"
+    android:layout_width="88dp"
+        android:layout_height="88dp"
+    android:src="@drawable/ho1"
+    android:contentDescription="Bottom Left Image"
+    android:layout_marginStart="16dp"
+    android:layout_marginBottom="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:scaleType="fitCenter"  android:background="?attr/selectableItemBackgroundBorderless"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

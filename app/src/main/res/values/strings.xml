@@ -11,4 +11,10 @@
     <string name="sign_ups">Sign Up</string>
     <string name="already_have_an_account_login">Already have an account? Login</string>
     <string name="enter_passwords">Enter Password</string>
+    <string name="english">English</string>
+    <string name="geography">Geography</string>
+    <string name="history">History</string>
+    <string name="kannada">Kannada</string>
+    <string name="math">Math</string>
+    <string name="science">Science</string>
 </resources>
