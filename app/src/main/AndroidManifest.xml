@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ShikshanaEKshana"
         tools:targetApi="31">
         <activity
+            android:name=".KannadaOption"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
