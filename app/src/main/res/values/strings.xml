@@ -12,8 +12,8 @@
     <string name="already_have_an_account_login">Already have an account? Login</string>
     <string name="enter_passwords">Enter Password</string>
     <string name="english">English</string>
-    <string name="history">History</string>
-    <string name="geography">Geography</string>
+    <string name="history">Hindi</string>
+    <string name="geography">Social</string>
     <string name="math">Math</string>
     <string name="hindi">Hindi</string>
     <string name="social">Social</string>
@@ -38,4 +38,9 @@
     <string name="enter_name1">Enter Name</string>
     <string name="todo">TODO</string>
     <string name="select_image">Select Image</string>
+    <string name="app_logo">App logo</string>
+    <string name="ask_ai_vedh">Ask AI Vedh!</string>
+    <string name="ask_questions_here">Ask Questions Here</string>
+    <string name="bottom_left_image">Bottom Left Image</string>
+    <string name="user_profile">user_profile</string>
 </resources>

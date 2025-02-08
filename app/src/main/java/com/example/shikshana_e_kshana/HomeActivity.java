@@ -28,8 +28,12 @@ public class HomeActivity extends AppCompatActivity {
 
         ImageView userProfile = findViewById(R.id.user_profile);
         TextView ask = findViewById(R.id.ask_id);
-        Button b = findViewById(R.id.kannada_button);
-
+        TextView  b = findViewById(R.id.kannada_button);
+        TextView E = findViewById(R.id.english_button);
+        TextView  S = findViewById(R.id.science_button);
+        TextView  M = findViewById(R.id.math_button);
+        TextView  H = findViewById(R.id.history_button);
+        TextView  G = findViewById(R.id.geography_button);
         // Ensure 'ask' is not null
         if (ask != null) {
             ask.setOnClickListener(v -> {
@@ -56,5 +60,47 @@ public class HomeActivity extends AppCompatActivity {
         } else {
             System.out.println("user_profile ImageView not found!");
         }
+        if (E != null) {
+            E.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this,EnglishOption.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }
+        if (S != null) {
+            S.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, ScienceOption.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }  if (M != null) {
+            M.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, MathematicsOption.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }  if (G != null) {
+            G.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, SocialOption.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }
+        if (H != null) {
+            H.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, HindiOption.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }
+
+
+
+
     }
 }
