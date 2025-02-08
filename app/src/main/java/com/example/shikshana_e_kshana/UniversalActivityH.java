@@ -51,12 +51,12 @@ public class UniversalActivityH extends AppCompatActivity {
 
     private String getTextbookLink() {
         switch (selectedClass) {
-            case "Class 5": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
-            case "Class 6": return "https://example.com/class6_textbook.pdf";
-            case "Class 7": return "https://example.com/class7_textbook.pdf";
-            case "Class 8": return "https://example.com/class8_textbook.pdf";
-            case "Class 9": return "https://example.com/class9_textbook.pdf";
-            case "Class 10": return "https://example.com/class10_textbook.pdf";
+            case "Class 5": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
+            case "Class 6": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
+            case "Class 7": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
+            case "Class 8": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
+            case "Class 9": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
+            case "Class 10": return "https://drive.google.com/file/d/116lE7ZUCH1HLdgFr0CHY_40Ib_yx01Ti/view?usp=drive_link";
             default: return null;
         }
     }
