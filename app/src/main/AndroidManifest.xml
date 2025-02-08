@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ShikshanaEKshana"
         tools:targetApi="31">
         <activity
+            android:name=".FeedbackActivity"
+            android:exported="false" />
+        <activity
             android:name=".UniversalActivitySS"
             android:exported="false" />
         <activity
