@@ -1,3 +1,4 @@
+
 package com.example.shikshana_e_kshana;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shikshana_e_kshana.R;
 
-public class UniversalActivity extends AppCompatActivity {
+public class UniversalActivityE extends AppCompatActivity {
 
     private String selectedClass;
 

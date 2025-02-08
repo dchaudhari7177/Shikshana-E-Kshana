@@ -15,6 +15,12 @@
         android:theme="@style/Theme.ShikshanaEKshana"
         tools:targetApi="31">
         <activity
+            android:name=".UniversalActivityS"
+            android:exported="false" />
+        <activity
+            android:name=".UniversalActivityE"
+            android:exported="false" />
+        <activity
             android:name=".UniversalActivity"
             android:exported="false" />
         <activity

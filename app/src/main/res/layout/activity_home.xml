@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     android:background="@drawable/radient_bg"
     tools:context=".HomeActivity">
+    <!-- App Logo in the top-left corner -->
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/applogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/user_profile"
