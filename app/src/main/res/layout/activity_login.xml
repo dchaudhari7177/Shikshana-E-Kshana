@@ -51,9 +51,9 @@
         android:inputType="textEmailAddress"
         android:background="@drawable/input_bg"
         android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#D1D1D1"
-        android:layout_marginBottom="16dp" />
+        android:textColor="#000000"
+    android:textColorHint="#A9A9A9"
+    android:layout_marginBottom="16dp" />
 
     <!-- Password Field -->
     <EditText
@@ -64,9 +64,10 @@
         android:inputType="textPassword"
         android:background="@drawable/input_bg"
         android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#D1D1D1"
-        android:layout_marginBottom="16dp" />
+        android:textColor="#000000"
+    android:textColorHint="#A9A9A9"
+    android:layout_marginBottom="16dp" />
+
 
     <!-- Login Button -->
     <Button
