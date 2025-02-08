@@ -22,11 +22,15 @@
     <string name="enter_name">Enter Name</string>
     <string name="profile_image">Profile Image</string>
     <string name="save">Save</string>
-    <string name="class_10">Class 10</string>
+    <string name="class_6">Class 6</string>
     <string name="class_7">Class 7</string>
-    <string name="class_7_1">Class 7</string>
-    <string name="class_7_2">Class 7</string>
     <string name="class_8">Class 8</string>
     <string name="class_9">Class 9</string>
+    <string name="class_10">Class 10</string>
+    <string name="class_5">Class 5</string>
     <string name="kannada_1">Kannada</string>
+    <string name="button">Button</string>
+    <string name="app_logo">App logo</string>
+    <string name="bottom_left_image">Bottom Left Image</string>
+    <string name="user_profile">user_profile</string>
 </resources>

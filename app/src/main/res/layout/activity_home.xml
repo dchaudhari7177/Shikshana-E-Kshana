@@ -14,7 +14,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/lo1"
-    android:contentDescription="user_profile"
+    android:contentDescription="@string/user_profile"
     android:layout_marginTop="16dp"
     android:layout_marginEnd="16dp"
 
@@ -27,7 +27,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/applogo"
-    android:contentDescription="App logo"
+    android:contentDescription="@string/app_logo"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,8 @@
         app:layout_constraintTop_toBottomOf="@id/app_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Button 2 - Kannada -->
     <Button
@@ -57,7 +58,8 @@
         app:layout_constraintTop_toBottomOf="@id/english_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Button 3 - Science -->
     <Button
@@ -70,7 +72,8 @@
         app:layout_constraintTop_toBottomOf="@id/kannada_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Button 4 - Math -->
     <Button
@@ -83,7 +86,8 @@
         app:layout_constraintTop_toBottomOf="@id/science_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Button 5 - History -->
     <Button
@@ -96,7 +100,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Button 6 - Geography -->
     <Button
@@ -109,18 +114,21 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <ImageButton
     android:id="@+id/bottom_left_image_button"
     android:layout_width="88dp"
         android:layout_height="88dp"
     android:src="@drawable/ho1"
-    android:contentDescription="Bottom Left Image"
+    android:contentDescription="@string/bottom_left_image"
     android:layout_marginStart="16dp"
     android:layout_marginBottom="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    android:scaleType="fitCenter"  android:background="?attr/selectableItemBackgroundBorderless"/>
+    android:scaleType="fitCenter"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:id="@+id/kannadaHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/kannada"
+        android:text="@string/english"
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"
