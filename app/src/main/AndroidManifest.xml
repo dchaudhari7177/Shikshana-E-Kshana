@@ -13,9 +13,6 @@
         android:theme="@style/Theme.ShikshanaEKshana"
         tools:targetApi="31">
         <activity
-            android:name=".SocialOption"
-            android:exported="false" />
-        <activity
             android:name=".EnglishOption"
             android:exported="false" />
         <activity
