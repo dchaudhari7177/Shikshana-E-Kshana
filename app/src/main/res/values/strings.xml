@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Shikshana-E-Kshana</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="login">Login</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login1">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_emails">Enter Email</string>
+    <string name="enter_names">Enter Name</string>
+    <string name="sign_ups">Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="enter_passwords">Enter Password</string>
 </resources>
