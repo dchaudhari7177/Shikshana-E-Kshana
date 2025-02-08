@@ -6,28 +6,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/radient_bg"
     tools:context=".DetailActivity"
     android:padding="20dp">
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/applogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
-    <!-- Profile Image -->
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:background="@android:color/darker_gray"/>
-
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo"
+        tools:ignore="ImageContrastCheck" />
     <!-- Select Image Button -->
     <Button
         android:id="@+id/selectImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Image"
+        android:text="@string/select_image"
         app:layout_constraintTop_toBottomOf="@id/profileImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -38,7 +48,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Enter Name"
+        android:autofillHints=""
+        android:hint="@string/enter_name1"
+        android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintTop_toBottomOf="@id/selectImageButton"
         tools:layout_editor_absoluteX="20dp" />
@@ -49,8 +61,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Enter Standard"
+        android:autofillHints=""
+        android:hint="@string/enter_standard"
+        android:inputType="text"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintTop_toBottomOf="@id/etName"
         tools:layout_editor_absoluteX="20dp" />
 
@@ -59,17 +74,22 @@
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Description"
         android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:hint="@string/enter_description"
+        android:inputType="text"
+        android:minHeight="48dp"
         android:minLines="3"
-        app:layout_constraintTop_toBottomOf="@id/etClass"/>
+        android:textColorHint="#546E7A"
+        app:layout_constraintTop_toBottomOf="@id/etClass"
+        tools:layout_editor_absoluteX="20dp" />
 
     <!-- Save Button -->
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Profile"
+        android:text="@string/save_profile"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/etDescription"/>
 
