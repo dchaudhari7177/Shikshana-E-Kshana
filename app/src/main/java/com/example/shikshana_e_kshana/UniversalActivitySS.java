@@ -1,3 +1,4 @@
+
 package com.example.shikshana_e_kshana;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,14 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shikshana_e_kshana.R;
 
-public class UniversalActivity extends AppCompatActivity {
+public class UniversalActivitySS extends AppCompatActivity {
 
     private String selectedClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_universal);
+        setContentView(R.layout.activity_universal_ss);
 
         // Get the selected class
         selectedClass = getIntent().getStringExtra("selectedClass");
@@ -74,12 +75,12 @@ public class UniversalActivity extends AppCompatActivity {
 
     private String getSamplePaperLink() {
         switch (selectedClass) {
-            case "Class 5": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 6": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 7": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 8": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 9": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 10": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
+            case "Class 5": return "https://example.com/class5_sample_paper.pdf";
+            case "Class 6": return "https://example.com/class6_sample_paper.pdf";
+            case "Class 7": return "https://example.com/class7_sample_paper.pdf";
+            case "Class 8": return "https://example.com/class8_sample_paper.pdf";
+            case "Class 9": return "https://example.com/class9_sample_paper.pdf";
+            case "Class 10": return "https://example.com/class10_sample_paper.pdf";
             default: return null;
         }
     }

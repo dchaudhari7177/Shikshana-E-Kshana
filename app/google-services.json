@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125098963800",
+    "project_id": "shikshana-e-kshana",
+    "storage_bucket": "shikshana-e-kshana.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125098963800:android:0c5bfcce2082954332ab2d",
+        "android_client_info": {
+          "package_name": "com.example.shikshana_e_kshana"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHYk26YSQ_d6Jw_3voAZRo3jBxoC2f2rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
