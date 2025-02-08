@@ -26,8 +26,8 @@ public class OptionActivity extends AppCompatActivity {
         });
 
         // Find button1 by ID and set an OnClickListener
-        Button button1 = findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Open ChatbotActivity when button is clicked

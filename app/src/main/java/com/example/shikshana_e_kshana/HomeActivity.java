@@ -2,6 +2,7 @@ package com.example.shikshana_e_kshana;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
         ImageView userProfile = findViewById(R.id.user_profile);
         TextView ask = findViewById(R.id.ask_id);
+        Button b = findViewById(R.id.kannada_button);
 
         // Ensure 'ask' is not null
         if (ask != null) {
@@ -41,6 +43,14 @@ public class HomeActivity extends AppCompatActivity {
         if (userProfile != null) {
             userProfile.setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, DetailActivity.class);
+                startActivity(intent);
+            });
+        } else {
+            System.out.println("user_profile ImageView not found!");
+        }
+        if (b != null) {
+            b.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, KannadaOption.class);
                 startActivity(intent);
             });
         } else {
