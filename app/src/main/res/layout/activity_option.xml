@@ -46,7 +46,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chat with Botpress"
+        android:text="Chat with AI Vedh"
         app:layout_constraintTop_toBottomOf="@id/image2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
