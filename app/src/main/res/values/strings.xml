@@ -8,6 +8,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="enter_emails">Enter Email</string>
     <string name="enter_names">Enter Name</string>
+    <string name="a">notes</string>
+    <string name="b">Sample p</string>
+    <string name="c">Textbook</string>
     <string name="sign_ups">Sign Up</string>
     <string name="already_have_an_account_login">Already have an account? Login</string>
     <string name="enter_passwords">Enter Password</string>
