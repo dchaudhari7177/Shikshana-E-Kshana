@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radient_bg"
+    tools:context=".KannadaOption">
+
+    <TextView
+        android:id="@+id/kannadaHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mathematics"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/class5Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/class_5"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kannadaHeading"
+        tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/class6Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/class_6"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"  app:layout_constraintTop_toBottomOf="@+id/class5Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"  android:layout_marginEnd="32dp"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/class7Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/class_7"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"  app:layout_constraintTop_toBottomOf="@+id/class6Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"  android:layout_marginEnd="32dp"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/class8Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/class_8"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"
+        app:layout_constraintTop_toBottomOf="@+id/class7Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"  android:layout_marginEnd="32dp"
+        tools:ignore="VisualLintButtonSize" />
+
+
+    <Button
+        android:id="@+id/class9Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/class_9"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"  app:layout_constraintTop_toBottomOf="@+id/class8Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"  android:layout_marginEnd="32dp"
+        tools:ignore="VisualLintButtonSize" />
+
+
+    <Button
+        android:id="@+id/class10Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/class_10"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"  app:layout_constraintTop_toBottomOf="@+id/class9Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
