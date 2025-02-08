@@ -1,16 +1,24 @@
 package com.example.shikshana_e_kshana;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class HomeActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +32,11 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
+        mAuth = FirebaseAuth.getInstance(); // Initialize FirebaseAuth
+
         // Initialize UI elements
         ImageView userProfile = findViewById(R.id.user_profile);
+        ImageView logout = findViewById(R.id.logout); // Get the logout ImageView
         TextView ask = findViewById(R.id.ask_id);
         TextView kannadaButton = findViewById(R.id.kannada_button);
         TextView englishButton = findViewById(R.id.english_button);
@@ -43,23 +54,36 @@ public class HomeActivity extends AppCompatActivity {
         setupClickListener(mathButton, MathematicsOption.class);
         setupClickListener(historyButton, HindiOption.class);
         setupClickListener(geographyButton, SocialOption.class);
+
+        // Logout functionality
+        logout.setOnClickListener(v -> {
+            // Firebase sign out
+            mAuth.signOut();
+
+            // Clear shared preferences login state
+            SharedPreferences.Editor editor = getSharedPreferences("LoginPrefs", Context.MODE_PRIVATE).edit();
+            editor.putBoolean("isLoggedIn", false);
+            editor.apply(); // Ensure changes are saved
+
+            // Redirect to LoginActivity
+            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear back stack
+            startActivity(intent);
+
+            Toast.makeText(HomeActivity.this, "Logged Out", Toast.LENGTH_SHORT).show();
+        });
     }
 
-    /**
-     * Helper method to set an onClickListener for a TextView or ImageView
-     */
-    private void setupClickListener(TextView textView, Class<?> activityClass) {
-        if (textView != null) {
-            textView.setOnClickListener(v -> {
+
+        // Corrected setupClickListener method for both ImageView and TextView
+    private void setupClickListener(Object view, Class<?> activityClass) {
+        if (view instanceof ImageView) {
+            ((ImageView) view).setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, activityClass);
                 startActivity(intent);
             });
-        }
-    }
-
-    private void setupClickListener(ImageView imageView, Class<?> activityClass) {
-        if (imageView != null) {
-            imageView.setOnClickListener(v -> {
+        } else if (view instanceof TextView) {
+            ((TextView) view).setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, activityClass);
                 startActivity(intent);
             });

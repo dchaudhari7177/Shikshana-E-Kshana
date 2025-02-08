@@ -10,19 +10,19 @@
     <!-- App Logo in the top-left corner -->
     <ImageView
         android:id="@+id/logout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:contentDescription="@string/app_logo"
-        android:src="@drawable/applogo"
+        android:src="@drawable/leave"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/user_profile"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:src="@drawable/profile"
     android:contentDescription="@string/user_profile"
     android:layout_marginTop="16dp"

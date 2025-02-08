@@ -9,11 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,32 +26,29 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Initialize Firebase Authentication
         mAuth = FirebaseAuth.getInstance();
-
-        // SharedPreferences for login persistence
         sharedPreferences = getSharedPreferences("LoginPrefs", Context.MODE_PRIVATE);
 
-        // If user is already logged in, go to HomeActivity
-        if (sharedPreferences.getBoolean("isLoggedIn", false)) {
+        // Check if already logged in (persistence)
+        if (isLoggedIn()) { // Use the helper function
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
         }
 
-        // Link UI elements
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         signupLink = findViewById(R.id.signupLink);
 
-        // Login button click listener
         loginButton.setOnClickListener(v -> loginUser());
 
-        // Signup link click listener
         signupLink.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(LoginActivity.this, SignupActivity.class));
         });
+    }
+
+    private boolean isLoggedIn() { // Helper function for checking login state
+        return sharedPreferences.getBoolean("isLoggedIn", false);
     }
 
     private void loginUser() {
@@ -68,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Save login state in SharedPreferences
+                        // Use SharedPreferences to store login state
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putBoolean("isLoggedIn", true);
                         editor.apply();

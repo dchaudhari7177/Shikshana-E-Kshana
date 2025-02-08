@@ -1,125 +1,114 @@
 package com.example.shikshana_e_kshana;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class DetailActivity extends AppCompatActivity {
-
-    private static final int PICK_IMAGE_REQUEST = 1;
-    private ImageView profileImage;
+    private ShapeableImageView profileImage;
     private EditText etName, etClass, etDescription;
-    private Button btnSave, selectImageButton;
-    private DatabaseHelper dbHelper;
-    private String imageString = "";
+    private Bitmap selectedImageBitmap;
+    private DatabaseHelper databaseHelper;
+
+    private final ActivityResultLauncher<Intent> pickImageLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                    Uri imageUri = result.getData().getData();
+                    try {
+                        selectedImageBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+                        profileImage.setImageBitmap(selectedImageBitmap);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detail);
 
+        databaseHelper = new DatabaseHelper(this);
+        initializeViews();
+        loadSavedProfile();
+    }
+
+    private void initializeViews() {
         profileImage = findViewById(R.id.profileImage);
         etName = findViewById(R.id.etName);
         etClass = findViewById(R.id.etClass);
         etDescription = findViewById(R.id.etDescription);
-        btnSave = findViewById(R.id.btnSave);
-        selectImageButton = findViewById(R.id.selectImageButton);
 
-        dbHelper = new DatabaseHelper(this);
+        Button selectImageButton = findViewById(R.id.selectImageButton);
+        Button btnSave = findViewById(R.id.btnSave);
 
-        // Load previously saved data
-        loadProfileData();
-
-        // Select Image from Gallery
-        selectImageButton.setOnClickListener(v -> openGallery());
-
-        // Save Data
-        btnSave.setOnClickListener(v -> saveProfileData());
+        selectImageButton.setOnClickListener(v -> openImageChooser());
+        btnSave.setOnClickListener(v -> saveProfile());
     }
 
-    private void openGallery() {
+    private void openImageChooser() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+        pickImageLauncher.launch(intent);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    private void saveProfile() {
+        String name = etName.getText().toString().trim();
+        String className = etClass.getText().toString().trim();
+        String description = etDescription.getText().toString().trim();
 
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
-            Uri selectedImageUri = data.getData();
+        if (name.isEmpty() || className.isEmpty() || description.isEmpty()) {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+        if (selectedImageBitmap == null) {
+            Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Convert bitmap to byte array
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        selectedImageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+
+        Profile profile = new Profile(name, className, description, byteArray);
+        long result = databaseHelper.insertProfile(profile);
+
+        if (result != -1) {
+            Toast.makeText(this, "Profile saved successfully", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Failed to save profile", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void loadSavedProfile() {
+        Profile profile = databaseHelper.getProfile();
+        if (profile != null) {
+            etName.setText(profile.getName());
+            etClass.setText(profile.getClassName());
+            etDescription.setText(profile.getDescription());
+
+            Bitmap bitmap = profile.getImageBitmap();
+            if (bitmap != null) {
                 profileImage.setImageBitmap(bitmap);
-                imageString = encodeToBase64(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
+                selectedImageBitmap = bitmap;
             }
         }
-    }
-
-    private void saveProfileData() {
-        String name = etName.getText().toString();
-        String standard = etClass.getText().toString();
-        String description = etDescription.getText().toString();
-
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("name", name);
-        values.put("standard", standard);
-        values.put("description", description);
-        values.put("image", imageString);
-
-        db.insert("profile", null, values);
-        Toast.makeText(this, "Profile Saved!", Toast.LENGTH_SHORT).show();
-    }
-
-    private void loadProfileData() {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM profile", null);
-
-        if (cursor.moveToFirst()) {
-            etName.setText(cursor.getString(0));
-            etClass.setText(cursor.getString(1));
-            etDescription.setText(cursor.getString(2));
-
-            String imageBase64 = cursor.getString(3);
-            if (imageBase64 != null) {
-                profileImage.setImageBitmap(decodeBase64(imageBase64));
-            }
-        }
-        cursor.close();
-    }
-
-    private String encodeToBase64(Bitmap bitmap) {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-        byte[] byteArray = byteArrayOutputStream.toByteArray();
-        return Base64.encodeToString(byteArray, Base64.DEFAULT);
-    }
-
-    private Bitmap decodeBase64(String encodedImage) {
-        byte[] decodedBytes = Base64.decode(encodedImage, Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 }
