@@ -68,7 +68,7 @@ public class OptionActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CALL_PHONE_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                String phoneNumber = "+917406480541";
+                String phoneNumber = "+917760973627";
                 initiateCall(phoneNumber);
             } else {
                 Toast.makeText(this, "Call permission is required to make calls.", Toast.LENGTH_SHORT).show();
