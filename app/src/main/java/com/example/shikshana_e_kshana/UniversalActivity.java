@@ -51,35 +51,35 @@ public class UniversalActivity extends AppCompatActivity {
     private String getTextbookLink() {
         switch (selectedClass) {
             case "Class 5": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
-            case "Class 6": return "https://example.com/class6_textbook.pdf";
-            case "Class 7": return "https://example.com/class7_textbook.pdf";
-            case "Class 8": return "https://example.com/class8_textbook.pdf";
-            case "Class 9": return "https://example.com/class9_textbook.pdf";
-            case "Class 10": return "https://example.com/class10_textbook.pdf";
+            case "Class 6": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
+            case "Class 7": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
+            case "Class 8": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
+            case "Class 9": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
+            case "Class 10": return "https://drive.google.com/file/d/1QvSOa1K43ShoFxVDW4QO3yp_a9xxSt3k/view?usp=drive_link";
             default: return null;
         }
     }
 
     private String getNotesLink() {
         switch (selectedClass) {
-            case "Class 5": return "https://example.com/class5_notes.pdf";
-            case "Class 6": return "https://example.com/class6_notes.pdf";
-            case "Class 7": return "https://example.com/class7_notes.pdf";
-            case "Class 8": return "https://example.com/class8_notes.pdf";
-            case "Class 9": return "https://example.com/class9_notes.pdf";
-            case "Class 10": return "https://example.com/class10_notes.pdf";
+            case "Class 5": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
+            case "Class 6": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
+            case "Class 7": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
+            case "Class 8": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
+            case "Class 9": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
+            case "Class 10": return "https://drive.google.com/file/d/1IEihVMwinI-VsNc6OnqjGtDWYfpwLavb/view?usp=drive_link";
             default: return null;
         }
     }
 
     private String getSamplePaperLink() {
         switch (selectedClass) {
-            case "Class 5": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 6": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 7": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 8": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 9": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
-            case "Class 10": return "https://drive.google.com/file/d/1KCCq1IWtqW4wnl5apW0cgY3zC6dmYT7y/view?usp=drive_link";
+            case "Class 5": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
+            case "Class 6": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
+            case "Class 7": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
+            case "Class 8": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
+            case "Class 9": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
+            case "Class 10": return "https://drive.google.com/file/d/1HNceQkP2EzgoVLUBqwtPC6V4Sgtzmnyk/view?usp=drive_link";
             default: return null;
         }
     }
