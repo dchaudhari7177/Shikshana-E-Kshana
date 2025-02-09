@@ -11,24 +11,23 @@
     tools:context=".SignupActivity">
 
     <!-- First Image Placeholder -->
-    <ImageView
-        android:id="@+id/topImage"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/lo1"
-        android:contentDescription="Top Image"
-        android:layout_marginBottom="10dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="-140dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:paddingBottom="10dp">
 
-    <!-- Second Image Placeholder -->
-    <ImageView
-        android:id="@+id/middleImage"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/lo2"
-        android:contentDescription="Middle Image"
-        android:layout_marginBottom="10dp" />
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="Top Image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lo1" />
+    </LinearLayout>
 
     <!-- Title -->
     <TextView
@@ -36,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
+        android:layout_marginTop="-80dp"
         android:textSize="26sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"

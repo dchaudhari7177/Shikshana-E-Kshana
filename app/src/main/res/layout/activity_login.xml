@@ -4,90 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="20dp"
-    android:background="@drawable/radient_bg"
     android:orientation="vertical"
+    android:background="@drawable/radient_bg"
+    android:padding="20dp"
     tools:context=".LoginActivity">
 
-    <!-- First Image Placeholder -->
-    <ImageView
-        android:id="@+id/topImage"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/lo1"
-        android:contentDescription="Top Image"
-        android:layout_marginBottom="10dp" />
-
-    <!-- Second Image Placeholder -->
-    <ImageView
-        android:id="@+id/middleImage"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/lo2"
-        android:contentDescription="Middle Image"
-        android:layout_marginBottom="10dp" />
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/loginTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="26sp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Email Field -->
-    <EditText
-        android:id="@+id/emailEditText"
+    <!-- Top Image occupying 40% of the screen -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/input_bg"
-        android:padding="12dp"
-        android:textColor="#000000"
-    android:textColorHint="#A9A9A9"
-    android:layout_marginBottom="16dp" />
+        android:layout_marginTop="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        >
 
-    <!-- Password Field -->
-    <EditText
-        android:id="@+id/passwordEditText"
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="Top Image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lo1" />
+    </LinearLayout>
+
+    <!-- Remaining layout content (60% height) -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:background="@drawable/input_bg"
-        android:padding="12dp"
-        android:textColor="#000000"
-    android:textColorHint="#A9A9A9"
-    android:layout_marginBottom="16dp" />
+        android:layout_marginTop="-80dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:gravity="center">
 
+        <!-- Title -->
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="26sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:text="Login"
-        android:textSize="18sp"
-        android:background="@drawable/button_bg"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/input_bg"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#A9A9A9"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Signup Link -->
-    <TextView
-        android:id="@+id/signupLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
-        android:textColor="#FFD700"
-        android:textSize="16sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#A9A9A9"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Login"
+            android:textSize="18sp"
+            android:background="@drawable/button_bg"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Signup Link -->
+        <TextView
+            android:id="@+id/signupLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="#FFD700"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
 </LinearLayout>
