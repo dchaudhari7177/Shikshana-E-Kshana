@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -54,12 +55,18 @@ public class DetailActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etClass = findViewById(R.id.etClass);
         etDescription = findViewById(R.id.etDescription);
+        TextView feedbackTextView = findViewById(R.id.tvFeedback);
 
         Button selectImageButton = findViewById(R.id.selectImageButton);
         Button btnSave = findViewById(R.id.btnSave);
 
         selectImageButton.setOnClickListener(v -> openImageChooser());
         btnSave.setOnClickListener(v -> saveProfile());
+
+        feedbackTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(DetailActivity.this, FeedbackActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void openImageChooser() {

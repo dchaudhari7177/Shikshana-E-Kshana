@@ -9,6 +9,22 @@
     tools:context=".DetailActivity"
     android:padding="20dp">
 
+    <!-- Feedback TextView (Top Right) -->
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textSize="18sp"
+        android:background="@drawable/button_ab"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <ImageView
         android:layout_marginTop="40dp"
         android:id="@+id/app_logo"
@@ -19,7 +35,7 @@
         android:src="@drawable/applogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedback"
         tools:ignore="ImageContrastCheck" />
 
     <!-- Circular Profile Image -->
