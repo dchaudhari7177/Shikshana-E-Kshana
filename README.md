@@ -21,8 +21,6 @@
 
 Shikshana E-Kshana is a mobile app tailored for rural students from government schools (Class 1-10) who have limited access to the internet. The app includes AI-powered support for learning through voice calls and preloaded educational content such as textbooks and notes. The AI assistant "Vedh" can answer academic queries in offline mode, ensuring learning continues even without connectivity. 
 
-The initiative is backed by partnerships with NGOs, donors, and corporate sponsors, including Infosys, IBM, and Microsoft, to provide quality education to underserved communities.
-
 ---
 
 ## Features
