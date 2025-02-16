@@ -83,7 +83,3 @@ Shikshana E-Kshana is a mobile app tailored for rural students from government s
 ## Support
 
 For any issues or inquiries, please contact us at [aneekoppa@gmail.com](mailto:aneekoppa@gmail.com).
-
----
-
-This README provides an overview of the project, its features, technologies, and installation instructions. You can update the placeholders with real links and contact info when required!
